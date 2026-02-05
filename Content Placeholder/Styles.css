@@ -1,0 +1,81 @@
+.card {
+    background-color: #fff;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    margin: 12px;
+    border-radius: 5px;
+    box-shadow: 9px 17px 45px -29px rgba(0, 0, 0, 0.44);
+}
+
+.imgCard img {
+    width: 400px;
+    height: 300px;
+}
+
+.imgCard.loading {
+    height: 300px;
+    width: 400px;
+}
+
+.titleCard {
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    height: 1rem;
+    width: 50%;
+    margin: 1rem;
+    border-radius: 3px;
+}
+
+.titleCard.loading {
+    height: 1rem;
+    width: 50%;
+    margin: 1rem;
+    border-radius: 3px;
+}
+
+.descriptionCard {
+    padding: 8px;
+    font-size: 16px;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 3px;
+}
+
+.descriptionCard.loading {
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 3px;
+}
+
+.loading {
+    position: relative;
+    background-color: #e2e2e2;
+}
+
+.loading::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: -webkit-gradient(linear, left top,
+            right top, from(transparent),
+            color-stop(rgba(255, 255, 255, 0.396)),
+            to(transparent));
+
+    background: linear-gradient(90deg, transparent,
+            rgba(255, 255, 255, 0.259), transparent);
+
+    /* Adding animation */
+    animation: loading 0.7s infinite;
+}
+
+/* Loading Animation */
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
